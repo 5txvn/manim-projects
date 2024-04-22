@@ -2,7 +2,9 @@ from manim import *
 
 class Main(Scene):
     def construct(self):
+        #add the video sound
         self.add_sound("multiplying-by-11.mp3")
+        #create the intro
         heart1 = ImageMobject("heart.png")
         heart1.shift(LEFT*5)
         heart1.shift(UP*2)
@@ -28,6 +30,7 @@ class Main(Scene):
         self.wait(3);
         self.play(FadeOut(heart1),FadeOut(heart2),FadeOut(heart3),FadeOut(heart4),FadeOut(heart5),FadeOut(heart6),FadeOut(stevenlovesmath),run_time=1.5)
         self.wait(1);
+        #create the main title
         title = Text("Multiplying by 11")
         title.scale(1.5);
         self.play(Write(title),run_time=1.5);
@@ -39,6 +42,7 @@ class Main(Scene):
         self.wait(2)
         self.play(FadeOut(title),FadeOut(subtitle),run_time=2);
         self.wait(2)
+        #set up first problem
         problem1 = MathTex(r"87 \times 11=\dots");
         problem1.scale(2);
         self.play(Write(problem1),run_time=2);
